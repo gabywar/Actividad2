@@ -1,0 +1,14 @@
+# A2 Ejercicio de Python
+# Angela Gabriela Guerra Martinez
+# 2006738
+# N1
+# Solicitar al usuario que ingrese una lista de números separados por espacios esto para detectar si es par o impar.
+entrada_usuario = input("Ingrese una lista de números separados por espacios: ")
+
+# Dividir la entrada del usuario en una lista de números
+numeros = [int(x) for x in entrada_usuario.split()]
+
+# Mostrar la lista en orden inverso
+print("Lista en orden inverso:")
+for numero in reversed(numeros):
+    print(numero, end=" ")
