@@ -2,8 +2,8 @@
 # Angela Gabriela Guerra Martinez
 # 2006738
 # N1
-# Solicitar al usuario que ingrese una lista de números separados por espacios esto para detectar si es par o impar.
-entrada_usuario = input("Ingrese una lista de números separados por espacios: ")
+# Solicita al usuario que ingrese una lista de números separados por espacios para detectar si es par o impar.
+entrada_usuario = input("Ingresar una lista de números separados por espacios: ")
 
 # Dividir la entrada del usuario en una lista de números
 numeros = [int(x) for x in entrada_usuario.split()]
@@ -12,3 +12,72 @@ numeros = [int(x) for x in entrada_usuario.split()]
 print("Lista en orden inverso:")
 for numero in reversed(numeros):
     print(numero, end=" ")
+
+
+#Ingresar un conjunto de números separados por espacios: 7 5 6 2 1 2 Lista en orden inverso: 2 1 2 6 5 7
+# Solicitar al usuario que ingrese un número
+numero = int(input("Ingrese un número: "))
+
+# Comprobar si el número es par o impar
+if numero % 2 == 0:
+    print(f"{numero} es un número par.")
+else:
+    print(f"{numero} es un número impar.")
+
+
+
+
+#Ingrese un número: 33 33 es un número par.
+#import random
+
+# Generar un número aleatorio entre 1 y 100
+numero_objetivo = random.randint(1, 100)
+
+
+print("¡Bienvenido al juego de adivinar el número!")
+
+while True:
+    # Solicitar al usuario que ingrese un número
+    intento = int(input("Adivina el número (entre 1 y 100): "))
+
+
+    # Comprobar si el usuario adivinó el número
+    if intento == numero_objetivo:
+        print(f"¡Felicidades! Adivinaste el número .")
+        break
+    elif intento < numero_objetivo:
+        print("El número objetivo es mayor. Intenta de nuevo.")
+    else:
+        print("El número objetivo es menor. Intenta de nuevo.")
+
+¡Bienvenido al juego de adivinar el número! Adivina el número (entre 1 y 100): 50 El número objetivo es mayor. Intenta de nuevo. Adivina el número (entre 1 y 100): 70 El número objetivo es mayor. Intenta de nuevo. Adivina el número (entre 1 y 100): 80 El número objetivo es mayor. Intenta de nuevo. Adivina el número (entre 1 y 100): 90 El número objetivo es menor. Intenta de nuevo. Adivina el número (entre 1 y 100): 85 El número objetivo es menor. Intenta de nuevo. Adivina el número (entre 1 y 100): 82 El número objetivo es menor. Intenta de nuevo. Adivina el número (entre 1 y 100): 81 ¡Felicidades! Adivinaste el número .
+
+
+
+
+#def es_primo(numero):
+    if numero <= 1:
+        return False
+    if numero <= 3:
+        return True
+    if numero % 2 == 0 or numero % 3 == 0:
+        return False
+    i = 5
+    while i * i <= numero:
+        if numero % i == 0 or numero % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+# Solicitar al usuario que ingrese un rango de números
+inicio = int(input("Ingrese el número de inicio del rango: "))
+fin = int(input("Ingrese el número de fin del rango: "))
+
+print(f"Los números primos en el rango de {inicio} a {fin} son:")
+
+# Encontrar y mostrar los números primos en el rango
+for numero in range(inicio, fin + 1):
+    if es_primo(numero):
+        print(numero, end=" ")
+
+Ingrese el número de inicio del rango: 5 Ingrese el número de fin del rango: 88 Los números primos en el rango de 5 a 88 son: 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83
